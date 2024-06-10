@@ -1,10 +1,13 @@
-import * as path from "path";
+import path from "path";
+import { fileURLToPath } from "url";
 import { test, Route } from "@playwright/test";
 import { TDSModal } from "../components/modals/tds.modal";
 import { FORM_ERRORS } from "../data/form-errors";
 import { TEST_CARDS } from "../data/test-cards";
 import { PayForm } from "../pages/payform.page";
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 const PAYFORM_HTML_PAGE = path.join(__dirname, "..", "static", "payform.html");
 
 test.describe("PayForm tests", () => {
