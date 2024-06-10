@@ -18,7 +18,7 @@ test.describe("PayForm tests", () => {
     payForm = new PayForm(page);
     tdsModal = new TDSModal(page);
 
-    await page.goto(PAYFORM_HTML_PAGE);
+    await page.goto("file://" + PAYFORM_HTML_PAGE);
   });
 
   test("Successful payment", async () => {
